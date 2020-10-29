@@ -9,11 +9,10 @@ namespace CommandApi.Data
     {
         private readonly CommandContext _context;
 
-        public SqlCommandApiRepo(CommandContext context)
-        {
+        public SqlCommandApiRepo(CommandContext context) =>
             _context = context;
-        }
-        
+
+
         public bool SaveChanges()
         {
             return _context.SaveChanges() >= 0;
